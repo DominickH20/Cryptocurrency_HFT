@@ -44,7 +44,7 @@ def main():
             dp_counter = 0
 
         #open stream
-        write_file = open('./data/BTC/BTC_Book__' + str(file_counter) + '.csv', 'a+', newline='')
+        write_file = open('./BTC/BTC_Book__' + str(file_counter) + '.csv', 'a+', newline='')
         writer = csv.writer(write_file)
 
         if dp_counter == 0:
