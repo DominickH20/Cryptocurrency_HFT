@@ -39,12 +39,12 @@ def main():
     #loop - while true, always collect
     while True:
         start = pd.Timestamp.now(tz='America/New_York')
-        if dp_counter != 0 and dp_counter % 50000 == 0:
+        if dp_counter != 0 and dp_counter % 100 == 0:
             file_counter+=1
             dp_counter = 0
 
         #open stream
-        write_file = open('./BTC/BTC_Book__' + str(file_counter) + '.csv', 'a+', newline='')
+        write_file = open('./BTC/BTC_Book_' + str(file_counter) + '.csv', 'a+', newline='')
         writer = csv.writer(write_file)
 
         #write header
