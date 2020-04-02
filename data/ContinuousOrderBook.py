@@ -47,12 +47,20 @@ def main():
         write_file = open('./BTC/BTC_Book__' + str(file_counter) + '.csv', 'a+', newline='')
         writer = csv.writer(write_file)
 
+        #write header
         if dp_counter == 0:
-            #write header
             writer.writerow(headers)
 
         #query data from API
-        resp = requests.get('https://api.pro.coinbase.com/products/BTC-USD/book?level=2')
+        resp = None
+        try:
+            resp = requests.get('https://api.pro.coinbase.com/products/BTC-USD/book?level=2')
+        except:
+            print("An Exception Occurred")
+            write_file.close()
+            continue
+
+        #get timestamp immediately following response
         ts = pd.Timestamp.now(tz='America/New_York')
 
         #transform and output data
@@ -63,7 +71,7 @@ def main():
         write_file.close()
         dp_counter+=1
 
-        #wait, so that each iteration takes ~5s
+        #wait, so that each iteration takes ~1s
         end = pd.Timestamp.now(tz='America/New_York')
         elapsed_sec = ((end-start).value)/1000000000
         time.sleep(max(0, 1 - elapsed_sec))
