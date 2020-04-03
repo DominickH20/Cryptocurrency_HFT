@@ -39,7 +39,7 @@ def main():
     #loop - while true, always collect
     while True:
         start = pd.Timestamp.now(tz='America/New_York')
-        if dp_counter != 0 and dp_counter % 100 == 0:
+        if dp_counter != 0 and dp_counter % 50000 == 0:
             file_counter+=1
             dp_counter = 0
 
@@ -55,17 +55,17 @@ def main():
         resp = None
         try:
             resp = requests.get('https://api.pro.coinbase.com/products/BTC-USD/book?level=2')
+
+            #get timestamp immediately following response
+            ts = pd.Timestamp.now(tz='America/New_York')
+
+            #transform and output data
+            data_line = unpack(ts,resp.json())
+            writer.writerow(data_line)
         except:
             print("An Exception Occurred")
             write_file.close()
             continue
-
-        #get timestamp immediately following response
-        ts = pd.Timestamp.now(tz='America/New_York')
-
-        #transform and output data
-        data_line = unpack(ts,resp.json())
-        writer.writerow(data_line)
 
         #close stream
         write_file.close()
