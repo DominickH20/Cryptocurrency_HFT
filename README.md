@@ -6,7 +6,7 @@ Price data is collected through the Coinbase public API approximately every seco
 
 ## Data Analysis
 <p align="center">
-  <img src="./figures/Price_Level_Order_Size.png" width="500" height="500" align = "middle"/>
+  <img width="500" height="500" src="./figures/Price_Level_Order_Size.png"/>
 </p>
 
 <img src="./figures/Price_Jump_Order_Book.gif" width="500" height="500" align = "middle">
