@@ -19,13 +19,13 @@ Below are various components of analysis conducted as part of this project. It i
 Below is a heatmap plot that indicates the size of BTC available to be traded over time at any given price. Green represents bids while purple represents asks. The darker the color, the more BTC is available at that price level. The order size values are mapped into a new range for easier plotting, so the color values are not directly interpretable.
 
 <p align="center">
-  <img src="./figures/Price_Level_Order_Size.png"/>
+  <img width="700" height="700" src="./figures/Price_Level_Order_Size.png"/>
 </p>
 
 Here is another interesting visualization made with the help of matplotlib's animator. It shows how the cumulative order book evolves over time along with the price and spread of BTC. This animation in particular tracks the large price increase at the start of the graph above.
 
 <p align="center">
-  <img src="./figures/Price_Jump_Order_Book.gif" align = "middle"/>
+  <img width="700" height="700" src="./figures/Price_Jump_Order_Book.gif" align = "middle"/>
 </p>
 
 
