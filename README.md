@@ -5,7 +5,10 @@ Price data is collected through the Coinbase public API approximately every seco
 <img src="./figures/Timedelta_Quality.png" width="500" height="500" align = "middle">
 
 ## Data Analysis
-<img src="./figures/Price_Level_Order_Size.png" width="500" height="500" align = "middle">
+<p align="center">
+  <img src="./figures/Price_Level_Order_Size.png" width="500" height="500" align = "middle"/>
+</p>
+
 <img src="./figures/Price_Jump_Order_Book.gif" width="500" height="500" align = "middle">
 
 Clustering of time series subsequences
