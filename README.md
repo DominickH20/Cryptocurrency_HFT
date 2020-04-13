@@ -9,9 +9,9 @@ Price data is collected through the Coinbase public API approximately every seco
 
 There are several pronounced spikes but based on [data quality checks](./data/Data_Quality_Checks.ipynb), only 0.128% of timedeltas are more than 0.3s away from a 1s target delta. These spikes occur for a variety of reasons like API issues, other processes running on the server that collects data, or really any other factor that increases latency.
 
-Sentiment data is collected from the CryptoMood API once per minute and is based on VADER analysis of recent tweets, facebook posts, reddit threads, and telegram messages.
+Sentiment data is collected from the CryptoMood API once per minute and is based on VADER analysis of recent tweets, facebook posts, reddit threads, and telegram messages. The aggregate score is a weighted average of the approximate reach of each post, calculated from platform specific engagement metrics.
 <p align="center">
-  <img src="./figures/sentiment.png" width="500" height="500"/>
+  <img src="./figures/sentiment.PNG" width="500" height="500"/>
 </p>
 
 
