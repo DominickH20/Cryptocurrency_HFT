@@ -11,7 +11,7 @@ There are several pronounced spikes but based on [data quality checks](./data/Da
 
 Sentiment data is collected from the CryptoMood API once per minute and is based on VADER analysis of recent tweets, facebook posts, reddit threads, and telegram messages. The aggregate score is a weighted average of the approximate reach of each post, calculated from platform specific engagement metrics.
 <p align="center">
-  <img src="./figures/sentiment.PNG" width="500" height="500"/>
+  <img src="./figures/sentiment.PNG" width="1200" height="400"/>
 </p>
 
 
