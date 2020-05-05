@@ -35,11 +35,9 @@ Here is another interesting visualization made with the help of matplotlib's ani
 </p>
 
 
-### Clustering of time series subsequences
-Details on clustering to come
-
 ## Model Development
-LSTMs on each cluster identified in the prior step
+ARIMA, LSTM, CNN.
+Descriptions to come.
 
 ## Trading Strategy Implementation
-TBD
+Implemented with backtrader. Description to come.
