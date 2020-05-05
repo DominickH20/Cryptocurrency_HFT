@@ -3,3 +3,6 @@
 ./data/BTC/*.csv
 .ipynb_checkpoints
 ./data/.ipynb_checkpoints
+*.h5
+*.npy
+*.json
