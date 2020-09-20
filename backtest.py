@@ -103,10 +103,10 @@ if __name__ == '__main__':
     #cerebro.addanalyzer(btanalyzers.SharpeRatio, _name='mysharpe',timeframe=bt.TimeFrame.Ticks) bug in his library
     #cerebro.broker.setcommission(commission=0.005) Coinbase fee is 0.5%. Other exchanges have lower fees especially if using limit orders and higher volume that could make the strategy most viable
 
-    datapath = 'test_predictions.csv'
+    datapath = './data/test_predictions.csv'
 
     # Create a Data Feed
-    data = customCSV(dataname='test_predictions.csv', timeframe = bt.TimeFrame.Ticks)
+    data = customCSV(dataname=datapath, timeframe = bt.TimeFrame.Ticks)
 
     cerebro.adddata(data)
     cerebro.broker.setcash(100000.0)
